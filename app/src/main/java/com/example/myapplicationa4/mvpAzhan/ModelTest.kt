@@ -24,6 +24,7 @@ class ModelTest(private val presenter: Contract.Presenter) {
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://api.aladhan.com/v1/")
             .build()
+
         val timesInterface=retrofit.create(azhanInterface::class.java)
         timesInterface.getTimings(city,country,8)
             .enqueue(object: Callback<jsonClass>{
@@ -31,17 +32,19 @@ class ModelTest(private val presenter: Contract.Presenter) {
                     Log.d("TAG",t.message)
                 }
 
-                override fun onResponse(
-                    call: Call<jsonClass>,
+                override fun onResponse(call: Call<jsonClass>,
                     response: Response<jsonClass>
                 ) {
+
+                    val results = response.body()?.data?.timings
+                    presenter.showResultPage(results)
 
                     tolu=response.body()?.data?.timings?.Sunrise.toString()
                     Sobh=response.body()?.data?.timings?.Fajr.toString()
                     Zohr=response.body()?.data?.timings?.Dhuhr.toString()
                     ghorub=response.body()?.data?.timings?.Maghrib.toString()
                     nimeshab=response.body()?.data?.timings?.Midnight.toString()
-                    presenter.showResultPage()
+                    presenter.showResultPage(results)
                 }
             })
     }

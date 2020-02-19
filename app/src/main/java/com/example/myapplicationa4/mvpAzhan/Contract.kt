@@ -1,18 +1,18 @@
 package com.example.myapplicationa4.mvpAzhan
 
+import com.example.myapplicationa4.retrofit.Timings
+
 
 interface Contract {
 
-    interface MainView:parentView{
+    interface MainView{
         fun openDrawer()
         fun OpenSearchPage()
     }
 
-    interface ResultView:parentView
-    {
-    }
+    interface ResultView {}
 
-    interface SearchView:parentView
+    interface SearchView
     {
         fun getCountryAndCity():Pair<String,String>
         fun OpenResultPage(model: ModelTest)
@@ -22,7 +22,6 @@ interface Contract {
         fun btnSearchCityClicked()
         fun btnTimesClicked()
         fun BtnSearchClicked()
-        fun showResultPage()
+        fun showResultPage(results: Timings?)
     }
-    interface parentView{}
 }

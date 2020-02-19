@@ -17,8 +17,11 @@ class ResultActivity : AppCompatActivity(), Contract.ResultView{
 
         txtSunrise.text = "tolu : "+intent.getStringExtra("tolu")
         txtFajr.text = " Sobh : "+ intent.getStringExtra("Sobh")
-        txtDhuhur.text = " Zohr : "+intent.getStringExtra("Zohr")
+        txtDhuhr.text = " Zohr : "+intent.getStringExtra("Zohr")
+        txtSunset.text = "Ghroub : "+intent.getStringExtra("ghroub")
         txtGhroub.text = "Maghroub : "+intent.getStringExtra("ghorub")
         txtMidnight.text = "Nime Shab : "+intent.getStringExtra("nimeshab")
+
+
     }
 }
