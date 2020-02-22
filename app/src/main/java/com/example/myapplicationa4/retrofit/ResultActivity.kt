@@ -7,7 +7,7 @@ import com.example.myapplicationa4.R
 import com.example.myapplicationa4.mvpAzhan.Contract
 import kotlinx.android.synthetic.main.activity_result.*
 
-class ResultActivity : AppCompatActivity(), Contract.ResultView{
+class ResultActivity : AppCompatActivity(), Contract{
 
     @SuppressLint("NewApi", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,29 +5,16 @@ import com.example.myapplicationa4.retrofit.Timings
 
 interface Contract {
 
-    interface MainView{
-        fun openDrawer()
-        fun OpenSearchPage()
-    }
-
-    interface ResultView {
-
-    }
-
-    interface SearchView
-    {
-        fun OpenResultPage(model: ModelTest)
+    interface View{
         fun getCountryCity(): Pair<String,String>
         fun showPrayerTime(prayerTimings: Timings?)
-
+        fun showError()
 
     }
-
     interface Presenter{
-        fun btnSearchCityClicked()
-        fun btnTimesClicked()
-        fun BtnSearchClicked()
-        fun showResultPage(results: Timings?)
         fun onPrayerButtonClicked()
+        fun onRetrofitResponse(isSucceed: Boolean, prayerTimings: Timings?)
+        fun getDayByHour(time: String):String
+
     }
 }
