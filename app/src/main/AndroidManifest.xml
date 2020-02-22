@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MVVM.ViewMvvm"></activity>
         <activity android:name=".retrofit.PrayerActivity" />
         <activity android:name=".retrofit.ResultActivity" />
         <activity android:name=".MainActivity">

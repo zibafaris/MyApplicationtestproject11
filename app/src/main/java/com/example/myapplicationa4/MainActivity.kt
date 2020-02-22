@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val listItem= arrayListOf("Prayer Times")
+        val listItem= arrayListOf("Prayer Times","....","....","....","....","....")
 
         recycler.layoutManager = LinearLayoutManager(this)
 
@@ -49,9 +50,11 @@ class MainActivity : AppCompatActivity() {
         button1.openDrawer(Gravity.RIGHT)    }
 
     fun OpenSearchPage() {
-        val intent= Intent(this, ResultActivity::class.java)
+        val intent= Intent(this,ResultActivity::class.java)
         startActivity(intent)    }
 
 }
 
-private fun Button.openDrawer(right: Int) {}
+private fun Button.openDrawer(right: Int) {
+    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+}

@@ -10,12 +10,17 @@ interface Contract {
         fun OpenSearchPage()
     }
 
-    interface ResultView {}
+    interface ResultView {
+
+    }
 
     interface SearchView
     {
-        fun getCountryAndCity():Pair<String,String>
         fun OpenResultPage(model: ModelTest)
+        fun getCountryCity(): Pair<String,String>
+        fun showPrayerTime(prayerTimings: Timings?)
+
+
     }
 
     interface Presenter{
@@ -23,5 +28,6 @@ interface Contract {
         fun btnTimesClicked()
         fun BtnSearchClicked()
         fun showResultPage(results: Timings?)
+        fun onPrayerButtonClicked()
     }
 }

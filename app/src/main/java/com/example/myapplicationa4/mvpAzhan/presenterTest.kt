@@ -8,7 +8,7 @@ class presenterTest(private val view: PrayerActivity):Contract.Presenter {
     val model=ModelTest(this)
 
     override fun btnSearchCityClicked() {
-        val countryAndCity=  (view as Contract.SearchView).getCountryAndCity()
+        val countryAndCity=  (view as Contract.SearchView).getCountryCity()
         model.fillTimes(countryAndCity.second,countryAndCity.first)
     }
 
@@ -23,4 +23,8 @@ class presenterTest(private val view: PrayerActivity):Contract.Presenter {
     override fun showResultPage(results: Timings?) {
         (view as Contract.SearchView).OpenResultPage(model)
     }
+
+    override fun onPrayerButtonClicked() {
+        val (country, city)=view.getCountryCity()
+        model.fillTimes(city, country)    }
 }
