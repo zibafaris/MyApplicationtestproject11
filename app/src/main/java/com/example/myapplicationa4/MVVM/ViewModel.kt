@@ -24,8 +24,6 @@ class ViewModel {
                  val error=it.message
                  //send error to view
              }))
-
-
     }
 
     fun clearDisposable(){

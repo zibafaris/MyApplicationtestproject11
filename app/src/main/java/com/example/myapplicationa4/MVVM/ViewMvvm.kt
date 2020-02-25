@@ -7,6 +7,7 @@ import com.example.myapplicationa4.retrofit.Timings
 import kotlinx.android.synthetic.main.activity_mvvm.*
 import kotlinx.android.synthetic.main.activity_prayer.*
 
+
 class ViewMvvm : AppCompatActivity() {
     val myViewModel=ViewModel()
 
@@ -25,7 +26,6 @@ class ViewMvvm : AppCompatActivity() {
     }
 
 
-
     fun getCountryCity(): Pair<String, String> {
         val country = edtCountry2.text.trim().toString()
         val city = edtCity2.text.trim().toString()
@@ -39,4 +39,5 @@ class ViewMvvm : AppCompatActivity() {
         txtSunset2.text =  prayerTimings?.Sunset
         txtMidnight2.text = prayerTimings?.Midnight
     }
+
 }

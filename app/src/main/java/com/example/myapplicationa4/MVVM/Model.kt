@@ -15,8 +15,6 @@ class Model {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
         return retrofit.create(ObservableRetrofit::class.java)
-
-
     }
 
     fun getAdhanObservable(country: String, city: String): Observable1<jsonClass> {
