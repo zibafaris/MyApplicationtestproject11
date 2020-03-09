@@ -1,15 +1,16 @@
-package com.example.firstkotlinapp.mvvm
+package com.example.myapplicationa4.MVVM
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.firstkotlinapp.mvvm.ViewModel
 import com.example.myapplicationa4.R
 import com.example.myapplicationa4.retrofit.Timings
 import kotlinx.android.synthetic.main.activity_mvvm.*
 import kotlinx.android.synthetic.main.activity_prayer.*
 
-
-class ViewMvvm : AppCompatActivity() {
-    val myViewModel=ViewModel()
+class ViewMvvm : AppCompatActivity(){
+    val myViewModel= ViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
