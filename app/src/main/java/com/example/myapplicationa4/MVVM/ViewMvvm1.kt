@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.firstkotlinapp.mvvm.ViewModel
 import com.example.myapplicationa4.R
 import com.example.myapplicationa4.retrofit.Timings
-import kotlinx.android.synthetic.main.activity_mvvm.*
 import kotlinx.android.synthetic.main.activity_prayer.*
 
 class ViewMvvm : AppCompatActivity(){
@@ -14,7 +13,7 @@ class ViewMvvm : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvvm)
+        setContentView(R.layout.activity_prayer)
         btnPrayerTime.setOnClickListener {
             myViewModel.onPrayerButtonClicked(getCountryCity().first,getCountryCity().second)
         }
@@ -28,8 +27,8 @@ class ViewMvvm : AppCompatActivity(){
 
 
     fun getCountryCity(): Pair<String, String> {
-        val country = edtCountry2.text.trim().toString()
-        val city = edtCity2.text.trim().toString()
+        val country = edtCountry.text.trim().toString()
+        val city = edtCity.text.trim().toString()
         return country to city
     }
 

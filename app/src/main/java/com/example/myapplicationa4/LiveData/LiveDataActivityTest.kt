@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.livedata_activity_test.*
 
 class TestLiveDataActivity : AppCompatActivity() {
 
-    //LiveData baraye save Observe data component hayi ke rooye an livedata emal shode dar soorat har change
+    //LiveData for save Observe data components that  livedata  inject for eny changes
     lateinit var viewModel: NewViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

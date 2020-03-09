@@ -7,6 +7,9 @@ import com.example.myapplicationa4.mvpAzhan.Contract
 import com.example.myapplicationa4.mvpAzhan.presenterTest
 import com.example.myapplicationa4.showToast
 import kotlinx.android.synthetic.main.activity_prayer.*
+import kotlinx.android.synthetic.main.activity_prayer.btnPrayerTime
+import kotlinx.android.synthetic.main.activity_prayer.edtCity
+import kotlinx.android.synthetic.main.activity_prayer.edtCountry
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -28,11 +31,12 @@ class PrayerActivity : AppCompatActivity(), Contract.View  {
     }
 
     override fun showPrayerTime(prayerTimings: Timings?) {
-        txtFajr.text =  prayerTimings?.Fajr
-        txtSunrise.text = prayerTimings?.Sunrise
-        txtDhuhur.text = prayerTimings?.Dhuhr
-        txtSunset.text =  prayerTimings?.Sunset
-        txtMidnight.text = prayerTimings?.Midnight
+        txtFajr2.text =  prayerTimings?.Fajr
+        txtSunrise2.text = prayerTimings?.Sunrise
+        txtDhuhur2.text = prayerTimings?.Dhuhr
+        txtSunset2.text =  prayerTimings?.Sunset
+        txtGhroub.text =  prayerTimings?.Maghrib
+        txtMidnight2.text = prayerTimings?.Midnight
     }
 
     override fun showUserTime() {
